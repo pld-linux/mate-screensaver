@@ -1,12 +1,12 @@
 Summary:	MATE screensaver
 Summary(pl.UTF-8):	Wygaszacz ekranu MATE
 Name:		mate-screensaver
-Version:	1.6.2
+Version:	1.8.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://pub.mate-desktop.org/releases/1.6/%{name}-%{version}.tar.xz
-# Source0-md5:	43e2cfcf8152c635922fc248462ea027
+Source0:	http://pub.mate-desktop.org/releases/1.8/%{name}-%{version}.tar.xz
+# Source0-md5:	fbc99c2185e6e06a144aeba674bb6ebf
 Source1:	%{name}.pamd
 URL:		http://mate-desktop.org/
 BuildRequires:	OpenGL-GLX-devel
@@ -14,14 +14,14 @@ BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	dbus-glib-devel >= 0.30
 BuildRequires:	gettext-devel >= 0.10.40
-BuildRequires:	glib2-devel >= 1:2.16.0
+BuildRequires:	glib2-devel >= 1:2.26.0
 BuildRequires:	gtk+2-devel >= 2:2.14.0
 BuildRequires:	intltool >= 0.35.0
-BuildRequires:	libmatekbd-devel >= 1.5.0
+BuildRequires:	libmatekbd-devel >= 1.7.1
 BuildRequires:	libnotify-devel >= 0.7.0
 BuildRequires:	libtool >= 1:1.4.3
 BuildRequires:	mate-common
-BuildRequires:	mate-desktop-devel >= 1.5.3
+BuildRequires:	mate-desktop-devel >= 1.7.1
 BuildRequires:	mate-menus-devel >= 1.5.0
 BuildRequires:	pam-devel
 BuildRequires:	pkgconfig
@@ -35,11 +35,11 @@ BuildRequires:	xorg-lib-libXxf86vm-devel
 BuildRequires:	xz
 Requires(post,preun):	glib2 >= 1:2.26.0
 Requires:	dbus-glib >= 0.30
-Requires:	glib2 >= 1:2.16.0
+Requires:	glib2 >= 1:2.26.0
 Requires:	gtk+2 >= 2:2.14.0
-Requires:	libmatekbd >= 1.5.0
+Requires:	libmatekbd >= 1.7.1
 Requires:	libnotify >= 0.7.0
-Requires:	mate-desktop >= 1.5.3
+Requires:	mate-desktop >= 1.7.1
 Requires:	mate-menus >= 1.5.0
 Requires:	xdg-menus
 Requires:	xorg-lib-libX11 >= 1.0
@@ -85,6 +85,7 @@ install %{SOURCE1} $RPM_BUILD_ROOT/etc/pam.d/mate-screensaver
 
 # mate < 1.5 did not exist in PLD, avoid dependency on mate-conf
 %{__rm} $RPM_BUILD_ROOT%{_datadir}/MateConf/gsettings/org.mate.screensaver.gschema.migrate
+%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/cmn
 
 %find_lang %{name}
 
@@ -119,8 +120,10 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_desktopdir}/screensavers
 %{_desktopdir}/screensavers/cosmos-slideshow.desktop
 %{_desktopdir}/screensavers/footlogo-floaters.desktop
+%{_desktopdir}/screensavers/gnomelogo-floaters.desktop
 %{_desktopdir}/screensavers/personal-slideshow.desktop
 %{_desktopdir}/screensavers/popsquares.desktop
+%{_pixmapsdir}/gnome-logo-white.svg
 %{_pixmapsdir}/mate-logo-white.svg
 %config(noreplace) %verify(not md5 mtime size) /etc/pam.d/mate-screensaver
 %{_sysconfdir}/xdg/autostart/mate-screensaver.desktop
