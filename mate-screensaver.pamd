@@ -1,4 +1,4 @@
 #%PAM-1.0
 auth		include		system-auth
 account		include		system-auth
-auth		optional	pam_mate_keyring.so
+auth		optional	pam_gnome_keyring.so
