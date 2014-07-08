@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_with	gtk3		# use GTK+ 3.x instead of 2.x
+
 Summary:	MATE screensaver
 Summary(pl.UTF-8):	Wygaszacz ekranu MATE
 Name:		mate-screensaver
@@ -15,7 +19,8 @@ BuildRequires:	automake >= 1:1.9
 BuildRequires:	dbus-glib-devel >= 0.30
 BuildRequires:	gettext-devel >= 0.10.40
 BuildRequires:	glib2-devel >= 1:2.26.0
-BuildRequires:	gtk+2-devel >= 2:2.14.0
+%{!?with_gtk3:BuildRequires:	gtk+2-devel >= 2:2.14.0}
+%{?with_gtk3:BuildRequires:	gtk+3-devel >= 3.0.0}
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libmatekbd-devel >= 1.7.1
 BuildRequires:	libnotify-devel >= 0.7.0
@@ -36,7 +41,8 @@ BuildRequires:	xz
 Requires(post,preun):	glib2 >= 1:2.26.0
 Requires:	dbus-glib >= 0.30
 Requires:	glib2 >= 1:2.26.0
-Requires:	gtk+2 >= 2:2.14.0
+%{!?with_gtk3:Requires:	gtk+2 >= 2:2.14.0}
+%{?with_gtk3:Requires:	gtk+3 >= 3.0.0}
 Requires:	libmatekbd >= 1.7.1
 Requires:	libnotify >= 0.7.0
 Requires:	mate-desktop >= 1.7.1
@@ -68,6 +74,7 @@ być dobrze zintegrowany ze środowiskiem graficznym.
 	--enable-locking \
 	--enable-pam \
 	--disable-silent-rules \
+	%{?with_gtk3:--with-gtk=3.0} \
 	--with-mit-ext \
 	--with-shadow \
 	--with-xf86gamma-ext \
@@ -85,7 +92,6 @@ install %{SOURCE1} $RPM_BUILD_ROOT/etc/pam.d/mate-screensaver
 
 # mate < 1.5 did not exist in PLD, avoid dependency on mate-conf
 %{__rm} $RPM_BUILD_ROOT%{_datadir}/MateConf/gsettings/org.mate.screensaver.gschema.migrate
-%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/cmn
 
 %find_lang %{name}
 
