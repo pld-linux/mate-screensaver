@@ -17,7 +17,7 @@ BuildRequires:	OpenGL-GLX-devel
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	dbus-glib-devel >= 0.30
-BuildRequires:	gettext-devel >= 0.10.40
+BuildRequires:	gettext-tools >= 0.10.40
 BuildRequires:	glib2-devel >= 1:2.26.0
 %{!?with_gtk3:BuildRequires:	gtk+2-devel >= 2:2.14.0}
 %{?with_gtk3:BuildRequires:	gtk+3-devel >= 3.0.0}
