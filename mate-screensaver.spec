@@ -5,12 +5,12 @@
 Summary:	MATE screensaver
 Summary(pl.UTF-8):	Wygaszacz ekranu MATE
 Name:		mate-screensaver
-Version:	1.8.1
-Release:	2
+Version:	1.10.0
+Release:	1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://pub.mate-desktop.org/releases/1.8/%{name}-%{version}.tar.xz
-# Source0-md5:	a392fefa7d00f25c10e526d2dbd0d25a
+Source0:	http://pub.mate-desktop.org/releases/1.10/%{name}-%{version}.tar.xz
+# Source0-md5:	9a56f9d1a9af15258f6db43bb1290c67
 Source1:	%{name}.pamd
 URL:		http://mate-desktop.org/
 BuildRequires:	OpenGL-GLX-devel
@@ -18,15 +18,15 @@ BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	dbus-glib-devel >= 0.30
 BuildRequires:	gettext-tools >= 0.10.40
-BuildRequires:	glib2-devel >= 1:2.26.0
-%{!?with_gtk3:BuildRequires:	gtk+2-devel >= 2:2.14.0}
+BuildRequires:	glib2-devel >= 1:2.36.0
+%{!?with_gtk3:BuildRequires:	gtk+2-devel >= 2:2.24.0}
 %{?with_gtk3:BuildRequires:	gtk+3-devel >= 3.0.0}
 BuildRequires:	intltool >= 0.35.0
 BuildRequires:	libmatekbd-devel >= 1.7.1
 BuildRequires:	libnotify-devel >= 0.7.0
 BuildRequires:	libtool >= 1:1.4.3
 BuildRequires:	mate-common
-BuildRequires:	mate-desktop-devel >= 1.7.1
+BuildRequires:	mate-desktop-devel >= 1.9.4
 BuildRequires:	mate-menus-devel >= 1.5.0
 BuildRequires:	pam-devel
 BuildRequires:	pkgconfig
@@ -36,16 +36,17 @@ BuildRequires:	xmlto
 BuildRequires:	xorg-lib-libX11-devel >= 1.0
 BuildRequires:	xorg-lib-libXScrnSaver-devel
 BuildRequires:	xorg-lib-libXext-devel
+BuildRequires:	xorg-lib-libXxf86misc-devel
 BuildRequires:	xorg-lib-libXxf86vm-devel
 BuildRequires:	xz
-Requires(post,preun):	glib2 >= 1:2.26.0
+Requires(post,postun):	glib2 >= 1:2.36.0
 Requires:	dbus-glib >= 0.30
-Requires:	glib2 >= 1:2.26.0
-%{!?with_gtk3:Requires:	gtk+2 >= 2:2.14.0}
+Requires:	glib2 >= 1:2.36.0
+%{!?with_gtk3:Requires:	gtk+2 >= 2:2.24.0}
 %{?with_gtk3:Requires:	gtk+3 >= 3.0.0}
 Requires:	libmatekbd >= 1.7.1
 Requires:	libnotify >= 0.7.0
-Requires:	mate-desktop >= 1.7.1
+Requires:	mate-desktop >= 1.9.4
 Requires:	mate-menus >= 1.5.0
 Requires:	xdg-menus
 Requires:	xorg-lib-libX11 >= 1.0
