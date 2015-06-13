@@ -5,12 +5,12 @@
 Summary:	MATE screensaver
 Summary(pl.UTF-8):	Wygaszacz ekranu MATE
 Name:		mate-screensaver
-Version:	1.10.0
+Version:	1.10.1
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://pub.mate-desktop.org/releases/1.10/%{name}-%{version}.tar.xz
-# Source0-md5:	9a56f9d1a9af15258f6db43bb1290c67
+# Source0-md5:	c27412983d479836df913d573695e5f8
 Source1:	%{name}.pamd
 URL:		http://mate-desktop.org/
 BuildRequires:	OpenGL-GLX-devel
