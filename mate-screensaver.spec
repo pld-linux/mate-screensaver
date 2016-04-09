@@ -5,12 +5,12 @@
 Summary:	MATE screensaver
 Summary(pl.UTF-8):	Wygaszacz ekranu MATE
 Name:		mate-screensaver
-Version:	1.12.0
+Version:	1.14.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://pub.mate-desktop.org/releases/1.12/%{name}-%{version}.tar.xz
-# Source0-md5:	879f1dfbf7403222f876459b772916c9
+Source0:	http://pub.mate-desktop.org/releases/1.14/%{name}-%{version}.tar.xz
+# Source0-md5:	28e8ba4b3e9f664a4f65e560caffd62b
 Source1:	%{name}.pamd
 URL:		http://mate-desktop.org/
 BuildRequires:	OpenGL-GLX-devel
@@ -89,10 +89,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install %{SOURCE1} $RPM_BUILD_ROOT/etc/pam.d/mate-screensaver
+%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/frp
 
-# mate < 1.5 did not exist in PLD, avoid dependency on mate-conf
-%{__rm} $RPM_BUILD_ROOT%{_datadir}/MateConf/gsettings/org.mate.screensaver.gschema.migrate
+install %{SOURCE1} $RPM_BUILD_ROOT/etc/pam.d/mate-screensaver
 
 %find_lang %{name}
 
