@@ -17,7 +17,7 @@ BuildRequires:	gettext-tools >= 0.10.40
 BuildRequires:	glib2-devel >= 1:2.36.0
 BuildRequires:	gtk+3-devel >= 3.14
 BuildRequires:	intltool >= 0.50.1
-BuildRequires:	libmatekbd-devel >= 1.7.1
+BuildRequires:	libmatekbd-devel >= 1.17.0
 BuildRequires:	libnotify-devel >= 0.7.0
 BuildRequires:	libtool >= 1:1.4.3
 BuildRequires:	mate-common
@@ -38,7 +38,7 @@ Requires(post,postun):	glib2 >= 1:2.36.0
 Requires:	dbus-glib >= 0.30
 Requires:	glib2 >= 1:2.36.0
 Requires:	gtk+3 >= 3.14
-Requires:	libmatekbd >= 1.7.1
+Requires:	libmatekbd >= 1.17.0
 Requires:	libnotify >= 0.7.0
 Requires:	mate-desktop >= 1.17.0
 Requires:	mate-menus >= 1.10.0
