@@ -1,12 +1,12 @@
 Summary:	MATE screensaver
 Summary(pl.UTF-8):	Wygaszacz ekranu MATE
 Name:		mate-screensaver
-Version:	1.20.3
+Version:	1.22.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://pub.mate-desktop.org/releases/1.20/%{name}-%{version}.tar.xz
-# Source0-md5:	0b15bea3b7c0120aa5a46fab2d2c9a23
+Source0:	http://pub.mate-desktop.org/releases/1.22/%{name}-%{version}.tar.xz
+# Source0-md5:	18d5c58520ccb19df5e6da7aac494a85
 Source1:	%{name}.pamd
 URL:		http://mate-desktop.org/
 BuildRequires:	OpenGL-GLX-devel
@@ -22,7 +22,7 @@ BuildRequires:	libnotify-devel >= 0.7.0
 BuildRequires:	libtool >= 1:1.4.3
 BuildRequires:	mate-common
 BuildRequires:	mate-desktop-devel >= 1.17.0
-BuildRequires:	mate-menus-devel >= 1.10.0
+BuildRequires:	mate-menus-devel >= 1.21.0
 BuildRequires:	pam-devel
 BuildRequires:	pkgconfig
 BuildRequires:	systemd-devel
@@ -41,7 +41,7 @@ Requires:	gtk+3 >= 3.22
 Requires:	libmatekbd >= 1.17.0
 Requires:	libnotify >= 0.7.0
 Requires:	mate-desktop >= 1.17.0
-Requires:	mate-menus >= 1.10.0
+Requires:	mate-menus >= 1.21.0
 Requires:	xdg-menus
 Requires:	xorg-lib-libX11 >= 1.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
