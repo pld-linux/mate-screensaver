@@ -1,12 +1,12 @@
 Summary:	MATE screensaver
 Summary(pl.UTF-8):	Wygaszacz ekranu MATE
 Name:		mate-screensaver
-Version:	1.24.2
+Version:	1.26.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	https://pub.mate-desktop.org/releases/1.24/%{name}-%{version}.tar.xz
-# Source0-md5:	b95f73d3682cc7617a5234482b805b6e
+Source0:	https://pub.mate-desktop.org/releases/1.26/%{name}-%{version}.tar.xz
+# Source0-md5:	b8900a3986eddcc8fe48733a51907a0a
 Source1:	%{name}.pamd
 URL:		http://mate-desktop.org/
 BuildRequires:	OpenGL-GLX-devel
@@ -14,7 +14,7 @@ BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake >= 1:1.9
 BuildRequires:	dbus-glib-devel >= 0.30
 BuildRequires:	gettext-tools >= 0.19.8
-BuildRequires:	glib2-devel >= 1:2.50.0
+BuildRequires:	glib2-devel >= 1:2.58.0
 BuildRequires:	gtk+3-devel >= 3.22
 BuildRequires:	libmatekbd-devel >= 1.17.0
 BuildRequires:	libnotify-devel >= 0.7.0
@@ -33,9 +33,9 @@ BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXxf86misc-devel
 BuildRequires:	xorg-lib-libXxf86vm-devel
 BuildRequires:	xz
-Requires(post,postun):	glib2 >= 1:2.50.0
+Requires(post,postun):	glib2 >= 1:2.58.0
 Requires:	dbus-glib >= 0.30
-Requires:	glib2 >= 1:2.50.0
+Requires:	glib2 >= 1:2.58.0
 Requires:	gtk+3 >= 3.22
 Requires:	libmatekbd >= 1.17.0
 Requires:	libnotify >= 0.7.0
