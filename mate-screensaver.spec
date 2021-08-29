@@ -8,7 +8,7 @@ Group:		X11/Applications
 Source0:	https://pub.mate-desktop.org/releases/1.26/%{name}-%{version}.tar.xz
 # Source0-md5:	b8900a3986eddcc8fe48733a51907a0a
 Source1:	%{name}.pamd
-URL:		http://mate-desktop.org/
+URL:		https://wiki.mate-desktop.org/mate-desktop/components/mate-screensaver/
 BuildRequires:	OpenGL-GLX-devel
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake >= 1:1.9
@@ -24,6 +24,7 @@ BuildRequires:	mate-desktop-devel >= 1.17.0
 BuildRequires:	mate-menus-devel >= 1.21.0
 BuildRequires:	pam-devel
 BuildRequires:	pkgconfig
+BuildRequires:	rpmbuild(macros) >= 1.592
 BuildRequires:	systemd-devel
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xmlto
