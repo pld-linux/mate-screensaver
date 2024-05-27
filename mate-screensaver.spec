@@ -1,12 +1,12 @@
 Summary:	MATE screensaver
 Summary(pl.UTF-8):	Wygaszacz ekranu MATE
 Name:		mate-screensaver
-Version:	1.26.2
+Version:	1.28.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	https://pub.mate-desktop.org/releases/1.26/%{name}-%{version}.tar.xz
-# Source0-md5:	6268aa589af67e3a818240d55377f34c
+Source0:	https://pub.mate-desktop.org/releases/1.28/%{name}-%{version}.tar.xz
+# Source0-md5:	0ae075d5d3c0f84d1cb1898bc231d504
 Source1:	%{name}.pamd
 URL:		https://wiki.mate-desktop.org/mate-desktop/components/mate-screensaver/
 BuildRequires:	OpenGL-GLX-devel
@@ -18,7 +18,7 @@ BuildRequires:	gettext-tools >= 0.19.8
 BuildRequires:	glib2-devel >= 1:2.58.0
 BuildRequires:	gtk+3-devel >= 3.22
 BuildRequires:	libmatekbd-devel >= 1.17.0
-BuildRequires:	libnotify-devel >= 0.7.0
+BuildRequires:	libnotify-devel >= 0.7.1
 BuildRequires:	libtool >= 1:1.4.3
 BuildRequires:	mate-common
 BuildRequires:	mate-desktop-devel >= 1.17.0
@@ -26,13 +26,13 @@ BuildRequires:	mate-menus-devel >= 1.21.0
 BuildRequires:	pam-devel
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.592
+# or elogind
 BuildRequires:	systemd-devel
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xmlto
 BuildRequires:	xorg-lib-libX11-devel >= 1.0
 BuildRequires:	xorg-lib-libXScrnSaver-devel
 BuildRequires:	xorg-lib-libXext-devel
-BuildRequires:	xorg-lib-libXxf86misc-devel
 BuildRequires:	xorg-lib-libXxf86vm-devel
 BuildRequires:	xz
 Requires(post,postun):	glib2 >= 1:2.58.0
@@ -40,7 +40,7 @@ Requires:	dbus-glib >= 0.30
 Requires:	glib2 >= 1:2.58.0
 Requires:	gtk+3 >= 3.22
 Requires:	libmatekbd >= 1.17.0
-Requires:	libnotify >= 0.7.0
+Requires:	libnotify >= 0.7.1
 Requires:	mate-desktop >= 1.17.0
 Requires:	mate-menus >= 1.21.0
 Requires:	xdg-menus
